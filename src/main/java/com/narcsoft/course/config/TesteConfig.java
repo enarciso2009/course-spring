@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Profile;
 import com.narcsoft.course.entities.User;
 import com.narcsoft.course.repositories.UserRepository;
 
+import javassist.expr.Cast;
+
 
 
 @Configuration
