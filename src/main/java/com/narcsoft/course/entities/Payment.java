@@ -25,13 +25,13 @@ public class Payment implements Serializable {
 	@MapsId
 	private Order order;
 	
-	public Payment() {
+	public Payment() {  // tive que criar o construtor vazio para não dar erro na execução esta diferente do professor 
 		
 	}
 		
 		
-	public Payment(Long id, Instant moment, Order order) {
-		super();
+	public Payment(Long id, Instant moment, Order order) {  // tive que criar um construtor com as variaveis para não dar erro na execução 
+		super();                                            // funcionou corretamente sem erros o resultado final foi igual do professor 
 		this.id = id;
 		this.moment = moment;
 		this.order = order;
