@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Profile;
 import com.narcsoft.course.entities.Category;
 import com.narcsoft.course.entities.Order;
 import com.narcsoft.course.entities.OrderItem;
+import com.narcsoft.course.entities.Payment;
 import com.narcsoft.course.entities.Product;
 import com.narcsoft.course.entities.User;
 import com.narcsoft.course.entities.enums.OrderStatus;
@@ -87,9 +88,13 @@ public class TesteConfig implements CommandLineRunner {
 		
 		orderItemRepository.saveAll(Arrays.asList(oi1, oi2, oi3, oi4));
 		
+		 Payment pay = new Payment(null, Instant.parse("2019-06-20T21:53:07Z"), o1);
+			o1.setPayment(pay);	
+				
 		
+		
+		orderRepository.save(o1);
 	}
-	
-	
-	
-}
+
+	}
+
